@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center min-h-screen p-8 bg-gray-50">
+    <div className="flex flex-col items-center min-h-screen p-8 bg-gradient-to-b from-blue-50 to-gray-50">
       <header className="text-center mb-10">
         <h1 className="text-5xl font-bold mb-4 text-blue-700">Welcome to 3DNotes</h1>
         <p className="text-lg text-gray-600">
@@ -15,7 +15,7 @@ export default function Home() {
         <div className="mb-6">
           <Image
             src="https://i.nostr.build/2soSNqRvhJ7WcL36.jpg"
-            alt="Bitcoin Lego Bricks"
+            alt="Colorful Bitcoin-inspired Lego bricks"
             width={600}
             height={400}
             className="rounded-lg shadow-lg"
@@ -23,22 +23,22 @@ export default function Home() {
         </div>
 
         {/* Copy Section */}
-        <div className="text-center max-w-2xl mb-6">
+        <section className="text-center max-w-2xl mb-6">
           <p className="text-xl text-gray-700 mb-4">
-            At 3DNotes, we combine innovation and creativity to make Bitcoin-inspired Lego bricks. 
-            Every piece is a tribute to freedom tech—empowering individuals and shaping a better world.
+            At 3DNotes, we merge creativity and cutting-edge tech to craft Bitcoin-inspired Lego bricks. 
+            Each piece celebrates freedom and innovation, empowering individuals to build a brighter future.
           </p>
           <p className="text-lg text-gray-600">
-            We add a personal touch with handwritten quotes because we believe 
-            a good quote can brighten anyone's day. Our mission is to spread positivity 
-            and inspire with every creation.
+            Every order includes a unique handwritten quote to spread positivity 
+            and inspire. It’s more than a product—it’s a message of hope.
           </p>
-        </div>
+        </section>
 
         {/* Button */}
         <Link
           href="/product"
-          className="inline-block bg-green-500 text-white px-8 py-3 rounded-lg hover:bg-green-600 text-lg"
+          className="inline-block bg-green-500 text-white px-8 py-3 rounded-lg hover:bg-green-600 text-lg transition-transform transform hover:scale-105"
+          aria-label="Explore our products"
         >
           Explore Products
         </Link>
