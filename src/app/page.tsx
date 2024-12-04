@@ -3,33 +3,45 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center min-h-screen p-8">
+    <div className="flex flex-col items-center min-h-screen p-8 bg-gray-50">
       <header className="text-center mb-10">
-        <h1 className="text-4xl font-bold mb-4">Welcome to 3DNotes</h1>
+        <h1 className="text-5xl font-bold mb-4 text-blue-700">Welcome to 3DNotes</h1>
         <p className="text-lg text-gray-600">
-          Premium 3D prints with a personal touch.
+          Revolutionizing 3D printing with passion and purpose.
         </p>
       </header>
-      <main className="grid gap-8 sm:grid-cols-2">
-        <div className="bg-gray-100 p-6 rounded-lg text-center">
+      <main className="flex flex-col items-center">
+        {/* Main Image */}
+        <div className="mb-6">
           <Image
-            src="/printer.jpg"
-            alt="3D Printer"
-            width={300}
-            height={200}
-            className="mx-auto mb-4"
+            src="https://i.nostr.build/2soSNqRvhJ7WcL36.jpg"
+            alt="Bitcoin Lego Bricks"
+            width={600}
+            height={400}
+            className="rounded-lg shadow-lg"
           />
-          <h2 className="text-xl font-bold">Top-notch 3D Printer</h2>
-          <p className="text-gray-600 mb-4">
-            Comes with a handwritten note to brighten your day.
-          </p>
-          <Link
-            href="/product"
-            className="inline-block bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600"
-          >
-            Shop Now
-          </Link>
         </div>
+
+        {/* Copy Section */}
+        <div className="text-center max-w-2xl mb-6">
+          <p className="text-xl text-gray-700 mb-4">
+            At 3DNotes, we combine innovation and creativity to make Bitcoin-inspired Lego bricks. 
+            Every piece is a tribute to freedom tech—empowering individuals and shaping a better world.
+          </p>
+          <p className="text-lg text-gray-600">
+            We add a personal touch with handwritten quotes because we believe 
+            a good quote can brighten anyone's day. Our mission is to spread positivity 
+            and inspire with every creation.
+          </p>
+        </div>
+
+        {/* Button */}
+        <Link
+          href="/product"
+          className="inline-block bg-green-500 text-white px-8 py-3 rounded-lg hover:bg-green-600 text-lg"
+        >
+          Explore Products
+        </Link>
       </main>
     </div>
   );
