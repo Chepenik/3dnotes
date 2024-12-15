@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paid Order Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-indigo-100 to-purple-200 min-h-screen flex items-center justify-center">
+  <div class="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
+    <h2 class="text-3xl font-bold text-purple-800 text-center mb-6">Order Form</h2>
+    <p class="text-purple-700 text-center mb-4">
+      Please fill out this form after completing your payment. Be sure to include your transaction ID for verification.
+    </p>
+    <form
+      action="https://formsubmit.co/chepenikconor@gmail.com"
+      method="POST"
+      class="space-y-4"
+    >
+      <!-- Anti-spam -->
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="/thankyou.html" />
+
+      <!-- Name -->
+      <div>
+        <label for="name" class="block text-purple-800 font-medium">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Your full name"
+          class="w-full border border-purple-300 rounded-lg p-3 mt-1 bg-purple-50 focus:ring focus:ring-purple-300"
+        />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-purple-800 font-medium">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="Your email address"
+          class="w-full border border-purple-300 rounded-lg p-3 mt-1 bg-purple-50 focus:ring focus:ring-purple-300"
+        />
+      </div>
+
+      <!-- Contact Information -->
+      <div>
+        <label for="contact" class="block text-purple-800 font-medium">Contact Information</label>
+        <input
+          type="text"
+          id="contact"
+          name="contact"
+          required
+          placeholder="Your handle on X or LinkedIn"
+          class="w-full border border-purple-300 rounded-lg p-3 mt-1 bg-purple-50 focus:ring focus:ring-purple-300"
+        />
+      </div>
+
+      <!-- Address -->
+      <div>
+        <label for="address" class="block text-purple-800 font-medium">Shipping Address</label>
+        <textarea
+          id="address"
+          name="address"
+          required
+          placeholder="Your shipping address (Street, City, State, ZIP)"
+          class="w-full border border-purple-300 rounded-lg p-3 mt-1 bg-purple-50 focus:ring focus:ring-purple-300"
+          rows="3"
+        ></textarea>
+      </div>
+
+      <!-- Transaction ID -->
+      <div>
+        <label for="transactionId" class="block text-purple-800 font-medium">Payment Transaction ID</label>
+        <input
+          type="text"
+          id="transactionId"
+          name="transactionId"
+          required
+          placeholder="Transaction ID from your Lightning payment"
+          class="w-full border border-purple-300 rounded-lg p-3 mt-1 bg-purple-50 focus:ring focus:ring-purple-300"
+        />
+      </div>
+
+      <!-- Preferred Color -->
+      <div>
+        <label for="color" class="block text-purple-800 font-medium">Preferred Color (Optional)</label>
+        <input
+          type="text"
+          id="color"
+          name="color"
+          placeholder="Your preferred color (e.g., Orange)"
+          class="w-full border border-purple-300 rounded-lg p-3 mt-1 bg-purple-50 focus:ring focus:ring-purple-300"
+        />
+      </div>
+
+      <!-- Notes -->
+      <div>
+        <label for="notes" class="block text-purple-800 font-medium">Additional Notes (Optional)</label>
+        <textarea
+          id="notes"
+          name="notes"
+          placeholder="Anything else you'd like us to know?"
+          class="w-full border border-purple-300 rounded-lg p-3 mt-1 bg-purple-50 focus:ring focus:ring-purple-300"
+          rows="3"
+        ></textarea>
+      </div>
+
+      <!-- Submit -->
+      <div class="text-center">
+        <button
+          type="submit"
+          class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition-transform transform hover:scale-105"
+        >
+          Submit Order
+        </button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
